@@ -1,0 +1,11 @@
+.link--top-bar-link {
+  text-decoration: underline;
+  color: white;
+}
+
+.link--customer-service {
+  text-decoration: underline;
+  font-weight: 700;
+  color: black;
+  font-size: 12px; 
+}

@@ -1,0 +1,129 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#top-bar",
+      "sticky-layout#4-desktop",
+      "flex-layout.row#3-desktop"
+    ]
+  },
+
+  "flex-layout.row#3-desktop": {
+    "props": {
+      "blockClass": "menu-link",
+      "horizontalAlign": "left",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      // "vtex.menu@2.x:menu#websites"
+      "vtex.menu@2.x:menu#departamento-menu"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "sticky-layout#4-desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#4-desktop"]
+  },
+  "flex-layout.row#4-desktop": {
+    "props": {
+      "blockClass": "main-header",
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar",
+      "flex-layout.col#top-right"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+    "blockClass": "logo-search-desktop",
+      "verticalAlign": "top",
+      "horizontalAlign": "center"
+    },
+    "children": ["image#logo-desktop"]
+  },
+  "image#logo-desktop": {
+    "props": {
+      "src": "assets/imgs/logo/logo-avanti@2x.png",
+      "blockClass": "logo-desktop"
+    }
+  },
+  "flex-layout.col#top-right": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "blockClass": ["top-right"]
+    },
+    "children": [
+      "link#customer-service",
+      "login",
+      "minicart.v2"
+    ]
+  },
+  "link#customer-service": {
+    "props": {
+      "blockClass": "customer-service",
+      "displayMode": "anchor",
+      "href": "",
+      "label": "Atendimento ao Cliente"
+    }
+  },
+
+  "header-layout.mobile": {
+    "children": ["sticky-layout#1-mobile"]
+  },
+  "sticky-layout#1-mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": [
+      "drawer",
+      "image#logo-mobile",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#deptos",
+      "menu-item#depto1",
+      "menu-item#cat1"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "image#logo-mobile": {
+    "props": {
+      "src": "assets/imgs/logo/logo-avanti@2x.png",
+      "maxHeight": "70px"
+    }
+  }
+}

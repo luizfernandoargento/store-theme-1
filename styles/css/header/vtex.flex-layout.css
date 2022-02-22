@@ -1,0 +1,29 @@
+.flexRow--wrapper__top-bar {
+  background-color: black;
+  height: 44px;
+}
+
+.flexRowContent--wrapper__top-bar,
+.flexRowContent--main-header,
+.flexRowContent--menu-link {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flexCol--wrapper__col,
+.flexCol--logo-search-desktop,
+.flexCol--top-right {
+  flex-direction: row;
+}
+
+.flexCol--wrapper__col-right {
+  display: flex;
+  text-decoration: underline;
+  font-size: 12px;
+  justify-content: flex-end;
+}
+
+.flexRow--menu-link,
+.flexRowContent--menu-link {
+  background-color: #f0f0f0;
+}
